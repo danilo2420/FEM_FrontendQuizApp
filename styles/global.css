@@ -47,6 +47,9 @@ body {
     --orange400: #FF7E35;
 
     --red500: #EE5454;
+
+    /* Default font color */
+    color: var(--blue900);
 }
 
 /* Typographies */

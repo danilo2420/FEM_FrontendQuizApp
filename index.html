@@ -7,14 +7,27 @@
   <title>Frontend quiz app</title>
 
   <link rel="stylesheet" href="styles/style.css">
+  <script defer src="scripts/main.js"></script>
 </head>
 <body>
 
-  hola buenas
-  <div class="topSection"></div>
-  <div class="bottomSection">
-    <div class="leftSection"></div>
-    <div class="rightSection"></div>
+  <!-- Main structure of the page-->
+  <div class="topSection">
+    <div class="topSection__leftSection">
+       <img src="assets/images/icon-accessibility.svg" class="topSection__leftSection__icon" alt="Quiz">
+       <div class="topSection__leftSection__title tp4-mobile">Accessibility</div>
+    </div>
+    <div class="topSection__rightSection">
+      <img src="assets/images/icon-sun-dark.svg" class="topSection__rightSection__sunIcon" alt="Light mode">
+      <div class="topSection__rightSection__toggleButton">
+        <div></div>
+      </div>
+      <img src="assets/images/icon-moon-dark.svg" class="topSection__rightSection__moonIcon" alt="Dark mode">
+    </div>
   </div>
+    <div class="bottomSection">
+      <div class="bottomSection__leftSection"></div>
+      <div class="bottomSection__rightSection"></div>
+    </div>
 </body>
 </html>

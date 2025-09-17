@@ -1,1 +1,58 @@
 @import url('global.css');
+
+body {
+    background-image: url('../assets/images/pattern-background-mobile-light.svg');
+    background-color: var(--grey50);
+}
+
+/* TOP SECTION */
+.topSection {
+    padding: 16px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topSection__leftSection {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.topSection__leftSection__icon {
+    width: 40px;
+    height: 40px;
+    padding: 5.7px;
+
+    background-color: var(--purple100);
+    border-radius: 4px;
+}
+
+.topSection__rightSection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.topSection__rightSection__sunIcon,
+.topSection__rightSection__moonIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.topSection__rightSection__toggleButton {
+    width: 32px;
+    height: 20px;
+    padding: 4px;
+
+    background-color: var(--purple600);
+    border-radius: 50px;
+}
+
+.topSection__rightSection__toggleButton > div {
+    width: 12px;
+    height: 12px;
+    background-color: var(--white);
+    border-radius: 100%;
+}
