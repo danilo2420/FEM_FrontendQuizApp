@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url('../assets/fonts/Rubik-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: Rubik-Italic;
+    src: url('../assets/fonts/Rubik-Italic-VariableFont_wght.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    /* Default font */
+    font-family: Rubik;
+    font-weight: 500;
+
+    /* Colors */
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --grey50: #F4F6FA;
+    --grey500: #626C7F;
+
+    --blue50: #EBF0FF;
+    --blue100: #EDF1F9;
+    --blue300: #ABC1E1;
+    --blue500: #306AFF;
+    --blue850: #3B4D66;
+    --blue900: #313E51;
+    --blue950: #2D3949;
+
+    --green100: #E0FDEF;
+    --green500: #2FD887;
+
+    --purple100: #F6E7FF;
+    --purple600: #A729F5;
+
+    --orange50: #FFF5ED;
+    --orange400: #FF7E35;
+
+    --red500: #EE5454;
+}
+
+/* Typographies */
+.tp1 {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 144px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.tp2-medium {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.tp2-light {
+    font-family: Rubik;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.tp3 {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0px;
+}
+
+.tp4 {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.tp5-medium {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+.tp5-regular {
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+.tp6 {
+    font-family: Rubik-Italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+/* Mobile typographies */ 
+.tp1-mobile {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 88px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.tp2-medium-mobile {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.tp2-light-mobile {
+    font-family: Rubik;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.tp3-mobile {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0px;
+}
+
+.tp4-mobile {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.tp5-mobile {
+    font-family: Rubik-Italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
