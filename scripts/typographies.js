@@ -36,11 +36,20 @@ const typographiesArray = [
         "element": ".bottomSection__leftSection__startMenu__subtitle",
         "typographies": {
             "mobile": "tp5-mobile",
-            "tablet": "tp5",
-            "desktop": "tp5"
+            "tablet": "tp6",
+            "desktop": "tp6"
+        }
+    },
+    {
+        "element": ".customList > * > *:last-child",
+        "typographies": {
+            "mobile": "tp4-mobile",
+            "tablet": "tp4",
+            "desktop": "tp4"
         }
     }
 ];
+
 
 const versionMinWidth = {
     "mobile": 0,
@@ -67,10 +76,10 @@ function setTypographies() {
 
     // Go through all the elements and change their typography
     for (let elementObject of typographiesArray) {
-        const element = document.querySelector(elementObject.element);
-        if (!element) continue;
-
-        setElementTypography(elementObject, element, version);
+        const severalElements = document.querySelectorAll(elementObject.element);
+        for (const element of severalElements) {
+            setElementTypography(elementObject, element, version);    
+        }
     }
 }
 

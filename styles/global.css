@@ -170,3 +170,44 @@ body {
 .nonvisible {
     display: none;
 }
+
+.customList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.customList > * {
+    padding: 16px;
+
+    background-color: var(--white);
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+@media (min-width: 600px) {
+    .customList {
+        gap: 24px;
+    }
+
+    .customList > * {
+        border-radius: 24px;
+
+        gap: 32px;
+    }
+}
+
+
+@media (min-width: 1100px) {
+    .customList {
+        gap: 16px;
+    }
+
+    .customList > * {
+        padding: 24px;
+    }
+    
+}

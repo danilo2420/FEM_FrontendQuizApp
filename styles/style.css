@@ -60,12 +60,20 @@ body {
 /* BOTTOM SECTION */
 .bottomSection {
     padding: 32px 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .bottomSection__leftSection__startMenu {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.bottomSection__leftSection__startMenu__subtitle {
+    color: var(--grey500);
 }
 
 
@@ -114,7 +122,10 @@ body {
     /* BOTTOM SECTION */
     .bottomSection {
         padding: 0px;
+
+        gap: 64px;
     }
+
     
 }
 
@@ -125,7 +136,20 @@ body {
     }
 
     /* BOTTOM SECTION */
+    .bottomSection {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 128px;
+    }
+
     .bottomSection__leftSection__startMenu {
         gap: 48px;   
+    }
+
+    .bottomSection__leftSection {
+    }
+
+    .bottomSection__rightSection {
+        min-width: 50%;
     }
 }
