@@ -58,9 +58,6 @@ body {
 }
 
 
-
-
-
 @media (min-width: 600px) {
     body {
         padding: 40px 64px;
@@ -73,11 +70,38 @@ body {
     .topSection {
         padding: 0;
     }
+
+    .topSection__leftSection__icon {
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
+
+    .topSection__rightSection {
+        gap: 16px;
+    }
+
+    .topSection__rightSection__sunIcon,
+    .topSection__rightSection__moonIcon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .topSection__rightSection__toggleButton {
+        width: 48px;
+        height: 28px;
+        padding: 4px;
+    }
+
+    .topSection__rightSection__toggleButton > div {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 @media (min-width: 1100px) {
     body {
-        padding: 83px 140px;
+        padding: 83px 140px 148px 140px;
         gap: 85px;
     }
 }
