@@ -11,7 +11,6 @@
 </head>
 <body>
 
-  <!-- Main structure of the page-->
   <div class="topSection">
     <div class="topSection__leftSection">
        <img src="assets/images/icon-accessibility.svg" class="topSection__leftSection__icon" alt="Quiz">
@@ -26,8 +25,21 @@
     </div>
   </div>
     <div class="bottomSection">
-      <div class="bottomSection__leftSection"></div>
-      <div class="bottomSection__rightSection"></div>
+      <div class="bottomSection__leftSection">
+        <!-- Only one of these components will be active at once-->
+        <div class="bottomSection__leftSection__startMenu">
+          <div class="bottomSection__leftSection__startMenu__title">Welcome to the <span>Frontend Quiz!</span></div>
+          <div class="bottomSection__leftSection__startMenu__subtitle">Pick a subject to get started.</div>
+        </div>
+        <div class="bottomSection__leftSection__question nonvisible"></div>
+        <div class="bottomSection__leftSection__score nonvisible"></div>
+      </div>
+      <div class="bottomSection__rightSection">
+        <!-- Only one of these components will be active at once-->
+        <div class="bottomSection__rightSection__startMenu" style="display: none;"></div>
+        <div class="bottomSection__rightSection__question nonvisible" style="display: none;"></div>
+        <div class="bottomSection__rightSection__score nonvisible" style="display: none;"></div>
+      </div>
     </div>
 </body>
 </html>

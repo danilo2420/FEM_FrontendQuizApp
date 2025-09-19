@@ -5,6 +5,8 @@
 
 // Elements with different typographies
 // Enter all the elements here and their different typographies
+
+// TODO: can I put this into a JSON?
 const typographiesArray = [
     {
         "element": ".topSection__leftSection__title",
@@ -12,6 +14,30 @@ const typographiesArray = [
             "mobile": "tp4-mobile",
             "tablet": "tp4",
             "desktop": "tp4"
+        }
+    },
+    {
+        "element": ".bottomSection__leftSection__startMenu__title",
+        "typographies": {
+            "mobile": "tp2-light-mobile",
+            "tablet": "tp2-light",
+            "desktop": "tp2-light"
+        }
+    },
+    {
+        "element": ".bottomSection__leftSection__startMenu__title span",
+        "typographies": {
+            "mobile": "tp2-medium-mobile",
+            "tablet": "tp2-medium",
+            "desktop": "tp2-medium"
+        }
+    },
+    {
+        "element": ".bottomSection__leftSection__startMenu__subtitle",
+        "typographies": {
+            "mobile": "tp5-mobile",
+            "tablet": "tp5",
+            "desktop": "tp5"
         }
     }
 ];
@@ -22,7 +48,7 @@ const versionMinWidth = {
     "desktop": 1100
 }
 
-let currVersion = "mobile";
+let currVersion = "";
 
 // Events
 window.onload = () => {
