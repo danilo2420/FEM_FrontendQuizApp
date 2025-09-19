@@ -66,6 +66,7 @@ body {
     gap: 40px;
 }
 
+/* Start menu */
 .bottomSection__leftSection__startMenu {
     display: flex;
     flex-direction: column;
@@ -74,6 +75,20 @@ body {
 
 .bottomSection__leftSection__startMenu__subtitle {
     color: var(--grey500);
+}
+
+/* Start menu list icons */
+.icon-html {
+    background-color: var(--orange50);
+}
+.icon-css {
+    background-color: var(--green100);
+}
+.icon-js {
+    background-color: var(--blue50);
+}
+.icon-accessibility {
+    background-color: var(--purple100);
 }
 
 
