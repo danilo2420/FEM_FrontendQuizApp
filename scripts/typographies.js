@@ -21,7 +21,6 @@ function main() {
             }
             return response.json();
         }).then((data) => {
-            console.log(data);
             typographiesArray = data;
 
             setTypographies();
