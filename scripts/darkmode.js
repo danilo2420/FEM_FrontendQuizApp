@@ -20,6 +20,10 @@ function main() {
         const bodyElement = document.querySelector('body');
         bodyElement.classList.toggle('body--dark'); 
 
+        // Start menu - Subtitle text
+        const startMenuSubtitle = document.querySelector('.bottomSection__leftSection__startMenu__subtitle');
+        startMenuSubtitle.classList.toggle('bottomSection__leftSection__startMenu__subtitle--dark');
+
         // List items 
         const customListItems = document.querySelectorAll('.customList > *');
         for (const item of customListItems) {
@@ -28,6 +32,11 @@ function main() {
 
         // Keep state in a variable in case we need it
         darkMode = !darkMode;
+        console.log(
+            darkMode ? 
+                "Website is now in dark mode" :
+                "Website is now in light mode"
+        )
     });
 }
 

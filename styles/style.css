@@ -1,7 +1,10 @@
 @import url('global.css');
 
+/* TODO: make variables for media queries cut points */
+
 body {
     background-image: url('../assets/images/pattern-background-mobile-light.svg');
+    background-repeat: no-repeat;
     background-color: var(--grey50);
 }
 
@@ -97,6 +100,9 @@ body {
     body {
         padding: 40px 64px;
 
+        background-image: url('../assets/images/pattern-background-desktop-light.svg');
+        background-size: cover;
+
         display: flex;
         flex-direction: column;
         gap: 50px;
@@ -173,6 +179,13 @@ body {
 .body--dark {
     color: var(--white);
     background-color: var(--blue900);
+    background-image: url('../assets/images/pattern-background-mobile-dark.svg');
+}
+
+@media (min-width: 600px) {
+    .body--dark {
+        background-image: url('../assets/images/pattern-background-desktop-dark.svg');
+    }
 }
 
 .topSection__rightSection__toggleButton--dark {
@@ -188,6 +201,12 @@ body {
     content: url('../assets/images/icon-moon-light.svg') !important;
 }
 
+.bottomSection__leftSection__startMenu__subtitle--dark {
+    color: var(--blue300);
+}
+
 .customList__item--dark {
     background-color: var(--blue850);
+
+    box-shadow: 0px 16px 40px rgba(49, 62, 81, 0.14);
 }
