@@ -1,71 +1,46 @@
 // *** 
 // This script sets and modifies the typographies of the different elements
+// You have to define the fonts for the different elements in /data/typographies.json
 // This is a solution to the ugly bandaid that I used to use until now
 // *** 
 
-// Elements with different typographies
-// Enter all the elements here and their different typographies
-
-// TODO: can I put this into a JSON?
-const typographiesArray = [
-    {
-        "element": ".topSection__leftSection__title",
-        "typographies": {
-            "mobile": "tp4-mobile",
-            "tablet": "tp4",
-            "desktop": "tp4"
-        }
-    },
-    {
-        "element": ".bottomSection__leftSection__startMenu__title",
-        "typographies": {
-            "mobile": "tp2-light-mobile",
-            "tablet": "tp2-light",
-            "desktop": "tp2-light"
-        }
-    },
-    {
-        "element": ".bottomSection__leftSection__startMenu__title span",
-        "typographies": {
-            "mobile": "tp2-medium-mobile",
-            "tablet": "tp2-medium",
-            "desktop": "tp2-medium"
-        }
-    },
-    {
-        "element": ".bottomSection__leftSection__startMenu__subtitle",
-        "typographies": {
-            "mobile": "tp5-mobile",
-            "tablet": "tp6",
-            "desktop": "tp6"
-        }
-    },
-    {
-        "element": ".customList > * > *:last-child",
-        "typographies": {
-            "mobile": "tp4-mobile",
-            "tablet": "tp4",
-            "desktop": "tp4"
-        }
-    }
-];
-
-
+let typographiesArray = null;
 const versionMinWidth = {
     "mobile": 0,
     "tablet": 600,
     "desktop": 1100
 }
-
 let currVersion = "";
 
-// Events
-window.onload = () => {
-    setTypographies();
+function main() {
+    // Read json file
+    fetch('data/typographies.json') // reads it from index.html location
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Error trying to fetch the typographies.json file');
+            }
+            return response.json();
+        }).then((data) => {
+            console.log(data);
+            typographiesArray = data;
+
+            setTypographies();
+            setEventListeners();
+        }).catch((error) => {
+            console.log(error);
+        });
 }
 
-window.onresize = () => {
-    setTypographies();
+function setEventListeners() {
+    
+    // This might not be necessary because we call setTypographies when reloading
+    // window.onload = () => {
+    //     setTypographies();
+    // }
+
+    window.onresize = () => {
+        setTypographies();
+    }
 }
 
 // Functions
@@ -111,3 +86,6 @@ function setElementTypography(elementObject, element, version) {
     // Add new typography as a function of the version
     element.classList.add(elementObject.typographies[version]);
 }
+
+
+main();

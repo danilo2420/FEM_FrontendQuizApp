@@ -1,0 +1,42 @@
+[
+    {
+        "element": ".topSection__leftSection__title",
+        "typographies": {
+            "mobile": "tp4-mobile",
+            "tablet": "tp4",
+            "desktop": "tp4"
+        }
+    },
+    {
+        "element": ".bottomSection__leftSection__startMenu__title",
+        "typographies": {
+            "mobile": "tp2-light-mobile",
+            "tablet": "tp2-light",
+            "desktop": "tp2-light"
+        }
+    },
+    {
+        "element": ".bottomSection__leftSection__startMenu__title span",
+        "typographies": {
+            "mobile": "tp2-medium-mobile",
+            "tablet": "tp2-medium",
+            "desktop": "tp2-medium"
+        }
+    },
+    {
+        "element": ".bottomSection__leftSection__startMenu__subtitle",
+        "typographies": {
+            "mobile": "tp5-mobile",
+            "tablet": "tp6",
+            "desktop": "tp6"
+        }
+    },
+    {
+        "element": ".customList > * > *:last-child",
+        "typographies": {
+            "mobile": "tp4-mobile",
+            "tablet": "tp4",
+            "desktop": "tp4"
+        }
+    }
+]
