@@ -168,7 +168,11 @@ body {
 
 /* Special classes */
 .nonvisible {
-    display: none;
+    display: none !important;
+}
+
+.specialGapForQuestion {
+    gap: 40px; 
 }
 
 /* LIST */

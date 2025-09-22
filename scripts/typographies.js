@@ -13,6 +13,7 @@ const versionMinWidth = {
 let currVersion = "";
 
 function main() {
+
     // Read json file
     fetch('data/typographies.json') // reads it from index.html location
         .then((response) => {

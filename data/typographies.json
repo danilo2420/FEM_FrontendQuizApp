@@ -38,5 +38,22 @@
             "tablet": "tp4",
             "desktop": "tp4"
         }
+    },
+    {
+        "element": ".bottomSection__leftSection__question__top__questionNumber",
+        "typographies": {
+            "mobile": "tp5-mobile",
+            "tablet": "tp6",
+            "desktop": "tp6"
+        }
+    },
+    {
+        "element": ".bottomSection__leftSection__question__top__question",
+        "typographies": {
+            "mobile": "tp3-mobile",
+            "tablet": "tp3",
+            "desktop": "tp3"
+        }
     }
 ]
+
