@@ -70,6 +70,14 @@
             "tablet": "tp4",
             "desktop": "tp4"
         }
+    },
+    {
+        "element": ".bottomSection__rightSection__question__btn",
+        "typographies": {
+            "mobile": "tp4-mobile",
+            "tablet": "tp4",
+            "desktop": "tp4"
+        }
     }
 ]
 

@@ -63,6 +63,7 @@ body {
 /* BOTTOM SECTION */
 .bottomSection {
     padding: 32px 24px;
+    padding-bottom: 87px;
 
     display: flex;
     flex-direction: column;
@@ -144,6 +145,17 @@ body {
     height: 40px;
 }
 
+.bottomSection__rightSection__question__btn {
+    padding: 19px;
+
+    background-color: var(--purple600);
+    color: var(--white);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /** MEDIA QUERIES **/
 @media (min-width: 600px) {
     body {
@@ -212,6 +224,10 @@ body {
         height: 56px;
 
         border: 12px;
+    }
+
+    .bottomSection__rightSection__question__btn {
+        padding: 32px;
     }
 }
 
