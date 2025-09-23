@@ -78,6 +78,14 @@
             "tablet": "tp4",
             "desktop": "tp4"
         }
+    },
+    {
+        "element": ".bottomSection__rightSection__question__errorMessage__text",
+        "typographies": {
+            "mobile": "tp4-mobile",
+            "tablet": "tp5-regular",
+            "desktop": "tp5-regular"
+        }
     }
 ]
 
