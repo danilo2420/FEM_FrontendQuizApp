@@ -54,6 +54,22 @@
             "tablet": "tp3",
             "desktop": "tp3"
         }
+    },
+    {
+        "element": ".bottomSection__rightSection__question__item__letter",
+        "typographies": {
+            "mobile": "tp4-mobile",
+            "tablet": "tp4",
+            "desktop": "tp4"
+        }
+    },
+    {
+        "element": ".bottomSection__rightSection__question__item__text",
+        "typographies": {
+            "mobile": "tp4-mobile",
+            "tablet": "tp4",
+            "desktop": "tp4"
+        }
     }
 ]
 
