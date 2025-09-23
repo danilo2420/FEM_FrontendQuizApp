@@ -206,6 +206,13 @@ body {
     .bottomSection__leftSection__question {
         gap: 40px;
     }
+
+    .bottomSection__rightSection__question__item__letter {
+        width: 56px;
+        height: 56px;
+
+        border: 12px;
+    }
 }
 
 @media (min-width: 1100px) {
