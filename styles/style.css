@@ -139,6 +139,11 @@ body {
     align-items: center;
 }
 
+.bottomSection__rightSection__question__item__icon {
+    width: 40px;
+    height: 40px;
+}
+
 /** MEDIA QUERIES **/
 @media (min-width: 600px) {
     body {
