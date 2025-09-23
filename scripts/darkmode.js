@@ -25,10 +25,21 @@ function main() {
         startMenuSubtitle.classList.toggle('bottomSection__leftSection__startMenu__subtitle--dark');
 
         // List items 
-        const customListItems = document.querySelectorAll('.customList > *');
+        const customListItems = document.querySelectorAll('.customList > *:not(.bottomSection__rightSection__question__btn)');
         for (const item of customListItems) {
             item.classList.toggle('customList__item--dark');
         }
+
+        const questionsButton = document.querySelector('.bottomSection__rightSection__question__btn');
+        questionsButton.classList.toggle('bottomSection__rightSection__question__btn--dark');
+
+        // Question: title at the top that shows the number of the question
+        const questionNumberInfo = document.querySelector('.bottomSection__leftSection__question__top__questionNumber');
+        questionNumberInfo.classList.toggle('bottomSection__leftSection__question__top__questionNumber--dark');
+
+        // Progress bar
+        const progressBar = document.querySelector('.bottomSection__leftSection__question__bottom');
+        progressBar.classList.toggle('bottomSection__leftSection__question__bottom--dark');
 
         // Keep state in a variable in case we need it
         darkMode = !darkMode;
