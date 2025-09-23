@@ -126,6 +126,18 @@ body {
     border-radius: 1000px;
 }
 
+.bottomSection__rightSection__question__item__letter {
+    width: 40px;
+    height: 40px;
+
+    background-color: var(--grey50);
+    color: var(--grey500);
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /** MEDIA QUERIES **/
 @media (min-width: 600px) {

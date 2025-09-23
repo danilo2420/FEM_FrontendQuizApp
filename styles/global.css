@@ -202,6 +202,10 @@ body {
     border-radius: 8px;
 }
 
+.customList > * > *:nth-child(2) {
+    flex: 1;
+}
+
 @media (min-width: 600px) {
     .customList {
         gap: 24px;
