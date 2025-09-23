@@ -235,3 +235,33 @@ body {
         padding: 24px;
     }
 }
+
+/* Button */
+.btn {
+    padding: 19px;
+
+    background-color: var(--purple600);
+    color: var(--white);
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    .btn {
+        padding: 32px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        border-radius: 24px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .btn {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}

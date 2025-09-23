@@ -72,7 +72,7 @@
         }
     },
     {
-        "element": ".bottomSection__rightSection__question__btn",
+        "element": ".btn",
         "typographies": {
             "mobile": "tp4-mobile",
             "tablet": "tp4",

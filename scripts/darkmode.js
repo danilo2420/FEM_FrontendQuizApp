@@ -1,5 +1,7 @@
 console.log("Hello from darkmode.js");
 
+// TODO: Have a script that references a JSON to simplify this code
+
 // Is dark mode activated?
 let darkMode = false; 
 
@@ -30,8 +32,10 @@ function main() {
             item.classList.toggle('customList__item--dark');
         }
 
-        const questionsButton = document.querySelector('.bottomSection__rightSection__question__btn');
-        questionsButton.classList.toggle('bottomSection__rightSection__question__btn--dark');
+        const buttons = document.querySelectorAll('.btn');
+        for (const button of buttons) {
+            button.classList.toggle('btn--dark');
+        }
 
         // Question: title at the top that shows the number of the question
         const questionNumberInfo = document.querySelector('.bottomSection__leftSection__question__top__questionNumber');
@@ -40,6 +44,12 @@ function main() {
         // Progress bar
         const progressBar = document.querySelector('.bottomSection__leftSection__question__bottom');
         progressBar.classList.toggle('bottomSection__leftSection__question__bottom--dark');
+
+        const scoreBoard = document.querySelector('.bottomSection__rightSection__score__result');
+        scoreBoard.classList.toggle('bottomSection__rightSection__score__result--dark');
+
+        const scoreBoardSubtitle = document.querySelector('.bottomSection__rightSection__score__result__bottom__subtext');
+        scoreBoardSubtitle.classList.toggle('bottomSection__rightSection__score__result__bottom__subtext--dark');
 
         // Keep state in a variable in case we need it
         darkMode = !darkMode;
