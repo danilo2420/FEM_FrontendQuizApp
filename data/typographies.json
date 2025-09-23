@@ -86,6 +86,32 @@
             "tablet": "tp5-regular",
             "desktop": "tp5-regular"
         }
+    },
+    {
+        "element": ".bottomSection__leftSection__score__message",
+        "typographies": {
+            "mobile": "tp2-light-mobile",
+            "tablet": "tp2-light",
+            "desktop": "tp2-light"
+        }
+    },
+    {
+        "element": ".bottomSection__leftSection__score__message > span",
+        "typographies": {
+            "mobile": "tp2-medium-mobile",
+            "tablet": "tp2-medium",
+            "desktop": "tp2-medium"
+        }
+    },
+    {
+        "element": ".bottomSection__rightSection__score__result__top__topic",
+        "typographies": {
+            "mobile": "tp4-mobile",
+            "tablet": "tp4",
+            "desktop": "tp4"
+        }
     }
 ]
+
+
 

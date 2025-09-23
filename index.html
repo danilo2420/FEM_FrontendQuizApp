@@ -33,7 +33,7 @@
         <div class="bottomSection__leftSection__startMenu__title">Welcome to the <span>Frontend Quiz!</span></div>
         <div class="bottomSection__leftSection__startMenu__subtitle">Pick a subject to get started.</div>
       </div>
-      <div class="bottomSection__leftSection__question">
+      <div class="bottomSection__leftSection__question nonvisible">
         <div class="bottomSection__leftSection__question__top">
           <div class="bottomSection__leftSection__question__top__questionNumber">Question 6 of 10</div>
           <div class="bottomSection__leftSection__question__top__question">Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?</div>
@@ -42,7 +42,9 @@
           <div></div>
         </div>
       </div>
-      <div class="bottomSection__leftSection__score nonvisible"></div>
+      <div class="bottomSection__leftSection__score">
+        <div class="bottomSection__leftSection__score__message">Quiz completed<br><span>You scored...</span></div>
+      </div>
     </div>
     <div class="bottomSection__rightSection">
       <!-- Only one of these components will be active at once-->
@@ -64,7 +66,7 @@
           <div class="bottomSection__rightSection__startMenu__item__text">Accessibility</div>
         </div>
       </div>
-      <div class="bottomSection__rightSection__question customList">
+      <div class="bottomSection__rightSection__question customList nonvisible">
         <div class="bottomSection__rightSection__question__item answerA">
           <div class="bottomSection__rightSection__question__item__letter">A</div>
           <div class="bottomSection__rightSection__question__item__text">4.5 : 1</div>
@@ -89,14 +91,25 @@
           <img src="assets/images/icon-correct.svg" class="bottomSection__rightSection__question__item__icon" alt="Correct answer">
           <img src="assets/images/icon-error.svg" class="bottomSection__rightSection__question__item__icon nonvisible" alt="Wrong answer">
         </div>
-        <!-- Submit Answer here-->
          <div class="bottomSection__rightSection__question__btn">Submit Answer</div>
          <div class="bottomSection__rightSection__question__errorMessage">
           <img src="assets/images/icon-error.svg" alt="Error">
           <div class="bottomSection__rightSection__question__errorMessage__text">Please select an answer</div>
          </div>
       </div>
-      <div class="bottomSection__rightSection__score nonvisible"></div>
+      <div class="bottomSection__rightSection__score">
+        <div class="bottomSection__rightSection__score__result">
+          <div class="bottomSection__rightSection__score__result__top">
+            <img src="assets/images/icon-accessibility.svg" class="bottomSection__rightSection__score__result__top__icon" alt="Topic">
+            <div class="bottomSection__rightSection__score__result__top__topic">Accessibility</div>
+          </div>
+          <div class="bottomSection__rightSection__score__result__bottom">
+            <div class="bottomSection__rightSection__score__result__bottom__bigNumber">8</div>
+            <div class="bottomSection__rightSection__score__result__bottom__subtext">Out of 10</div>
+          </div>
+        </div>
+        <div class="bottomSection__rightSection__score__btn">Play Again</div>
+      </div>
     </div>
   </div>
 </body>
