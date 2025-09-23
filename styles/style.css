@@ -203,6 +203,17 @@ body {
     border-radius: 4px;
 }
 
+.bottomSection__rightSection__score__result__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.bottomSection__rightSection__score__result__bottom__subtext {
+    color: var(--grey500);
+}
+
 /** MEDIA QUERIES **/
 @media (min-width: 600px) {
     body {

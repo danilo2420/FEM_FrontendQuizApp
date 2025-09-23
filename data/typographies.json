@@ -110,6 +110,22 @@
             "tablet": "tp4",
             "desktop": "tp4"
         }
+    },
+    {
+        "element": ".bottomSection__rightSection__score__result__bottom__bigNumber",
+        "typographies": {
+            "mobile": "tp1-mobile",
+            "tablet": "tp1",
+            "desktop": "tp1"
+        }
+    },
+    {
+        "element": ".bottomSection__rightSection__score__result__bottom__subtext",
+        "typographies": {
+            "mobile": "tp4-mobile",
+            "tablet": "tp4",
+            "desktop": "tp4"
+        }
     }
 ]
 
