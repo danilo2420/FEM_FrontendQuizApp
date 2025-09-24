@@ -171,6 +171,11 @@ body {
     display: none !important;
 }
 
+.hidden {
+    /* This keeps the space that the element fills when visible */
+    visibility: hidden;
+}
+
 .specialGapForQuestion {
     gap: 40px; 
 }
