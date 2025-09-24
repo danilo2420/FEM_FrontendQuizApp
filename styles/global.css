@@ -265,3 +265,43 @@ body {
         margin-bottom: 16px;
     }
 }
+
+/* Modifiers */
+.btn--notactive {
+    opacity: 0.5;
+}
+
+.answer--chosen {
+    border: solid var(--purple600) 3px;
+}
+
+.answer--chosen > .bottomSection__rightSection__question__item__letter {
+    color: var(--white);
+    background-color: var(--purple600);
+}
+
+.answer--correct {
+    border: solid var(--green500) 3px;
+}
+
+.answer--correct > .bottomSection__rightSection__question__item__letter {
+    color: var(--white);
+    background-color: var(--green500);
+}
+
+.answer--correct > .correct-icon {
+    display: block;
+}
+
+.answer--wrong {
+    border: solid var(--red500) 3px;
+}
+
+.answer--wrong > .bottomSection__rightSection__question__item__letter {
+    color: var(--white);
+    background-color: var(--red500);
+}
+
+.answer--wrong > .wrong-icon {
+    display: block;
+}
