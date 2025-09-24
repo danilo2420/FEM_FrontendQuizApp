@@ -157,6 +157,7 @@ body {
 .bottomSection__rightSection__question__errorMessage__text {
     display: contents;
     color: var(--red500);
+    background-color: none !important;
 }
 
 /* Score section */

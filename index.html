@@ -8,11 +8,12 @@
 
   <link rel="stylesheet" href="styles/style.css">
   <script defer src="scripts/typographies.js"></script>
-  <script defer src="scripts/darkmode2.js"></script>
+  <script defer src="scripts/darkmode.js"></script>
   <script defer src="scripts/main.js"></script>
 </head>
 <body>
 
+  <!-- TOP SECTION-->
   <div class="topSection">
     <div class="topSection__leftSection">
        <img src="assets/images/icon-accessibility.svg" class="topSection__leftSection__icon" alt="Quiz">
@@ -26,13 +27,18 @@
       <img src="assets/images/icon-moon-dark.svg" class="topSection__rightSection__moonIcon" alt="Dark mode">
     </div>
   </div>
+
+  <!-- BOTTOM SECTION-->
   <div class="bottomSection">
+    <!-- LEFT -->
     <div class="bottomSection__leftSection">
       <!-- Only one of these components will be active at once-->
+
       <div class="bottomSection__leftSection__startMenu nonvisible">
         <div class="bottomSection__leftSection__startMenu__title">Welcome to the <span>Frontend Quiz!</span></div>
         <div class="bottomSection__leftSection__startMenu__subtitle">Pick a subject to get started.</div>
       </div>
+
       <div class="bottomSection__leftSection__question nonvisible">
         <div class="bottomSection__leftSection__question__top">
           <div class="bottomSection__leftSection__question__top__questionNumber">Question 6 of 10</div>
@@ -42,12 +48,17 @@
           <div></div>
         </div>
       </div>
+
       <div class="bottomSection__leftSection__score">
         <div class="bottomSection__leftSection__score__message">Quiz completed<br><span>You scored...</span></div>
       </div>
+
     </div>
+
+    <!-- RIGHT -->
     <div class="bottomSection__rightSection">
       <!-- Only one of these components will be active at once-->
+
       <div class="bottomSection__rightSection__startMenu customList nonvisible">
         <div class="bottomSection__rightSection__startMenu__item">
           <img src="assets/images/icon-html.svg" class="icon-html" alt="HTML">
@@ -66,6 +77,7 @@
           <div class="bottomSection__rightSection__startMenu__item__text">Accessibility</div>
         </div>
       </div>
+
       <div class="bottomSection__rightSection__question customList">
         <div class="bottomSection__rightSection__question__item answerA">
           <div class="bottomSection__rightSection__question__item__letter">A</div>
@@ -97,6 +109,7 @@
           <div class="bottomSection__rightSection__question__errorMessage__text">Please select an answer</div>
          </div>
       </div>
+
       <div class="bottomSection__rightSection__score nonvisible">
         <div class="bottomSection__rightSection__score__result">
           <div class="bottomSection__rightSection__score__result__top">
@@ -110,6 +123,7 @@
         </div>
         <div class="bottomSection__rightSection__score__btn btn">Play Again</div>
       </div>
+
     </div>
   </div>
 </body>

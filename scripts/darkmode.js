@@ -29,6 +29,8 @@ function main() {
         // List items 
         const customListItems = document.querySelectorAll('.customList > *:not(.bottomSection__rightSection__question__btn)');
         for (const item of customListItems) {
+            if (item.classList.contains('bottomSection__rightSection__question__errorMessage')) 
+                continue;
             item.classList.toggle('customList__item--dark');
         }
 
