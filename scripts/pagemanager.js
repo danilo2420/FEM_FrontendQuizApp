@@ -1,7 +1,6 @@
-console.log("Hello from pagemanager.js");
-
 
 const pageManager = {
+    // VARIABLES
     pages: {
         "START_MENU": [
             ".topSection__leftSection",
@@ -25,6 +24,33 @@ const pageManager = {
         1: "QUESTION",
         2: "SCORE"
     },
+    topicMap: {
+        0: "HTML",
+        1: "CSS",
+        2: "JavaScript",
+        3: "Accessibility"
+    },
+    quizzesData: null,
+    quizzesDataInitialized: false,
+
+    // FUNCTIONS
+
+    loadQuizzesData: () => {
+        // Load data
+        fetch('data/data.json')
+            .then((response) => {
+                if (!response.ok)
+                    throw new Error("Error loading data.json file");
+                return response.json();
+            }).then((data) => {
+                pageManager.quizzesData = data;
+                pageManager.quizzesDataInitialized = true;
+                pageManager.populateQuestionPage(0, 1);
+            }).catch((error) => {
+                console.log(error);
+            });
+    },
+
     setPage: (index) => {
         // Validate page index
         if (index < 0 || index >= Object.keys(pageManager.pages).length) {
@@ -57,7 +83,40 @@ const pageManager = {
                 component.classList.remove('nonvisible');
             }
         }
+    },
+
+    populateQuestionPage: (topicIndex, questionIndex) => {
+        if (!pageManager.quizzesDataInitialized) return;
+
+        // Validate input
+        if (topicIndex < 0 || !Object.values(pageManager.topicMap).length) {
+            console.log("Topic index not valid");
+            topicIndex = 0;
+        }
+
+        const questionNumber = pageManager
+                        .quizzesData
+                        .quizzes[topicIndex]
+                        .questions
+                        .length;
+
+        if (questionIndex < 0 || questionIndex >= questionNumber) {
+            console.log("Question number not valid");
+            questionIndex = 0;
+        }
+
+        // Get topic and questions data
+        const topic = pageManager.quizzesData.quizzes[topicIndex].title;
+        const questionSet = pageManager.quizzesData.quizzes[topicIndex].questions;
+
+        const questionText = questionSet[questionIndex].question;
+        const questionOptions = questionSet[questionIndex].options;
+        const questionAnswer = questionSet[questionIndex].answer;
+        
     }
 }
 
-pageManager.setPage(5);
+// FUNCTION CALLS
+pageManager.loadQuizzesData();
+pageManager.setPage(0);
+pageManager.populateQuestionPage(0, 1);
