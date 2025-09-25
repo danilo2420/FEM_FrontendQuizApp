@@ -6,6 +6,7 @@ let questionsCurrent;
 let topicCurrent;
 
 function main() {
+    return; // Not doing anything here at the moment
     // Load data
     fetch('data/data.json')
         .then((response) => {
