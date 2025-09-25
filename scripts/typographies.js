@@ -12,7 +12,7 @@ const versionMinWidth = {
 }
 let currVersion = "";
 
-function main() {
+function typographiesMain() {
 
     // Read json file
     fetch('data/typographies.json') // reads it from index.html location
@@ -25,13 +25,13 @@ function main() {
             typographiesArray = data;
 
             setTypographies();
-            setEventListeners();
+            setEventListeners_typographies();
         }).catch((error) => {
             console.log(error);
         });
 }
 
-function setEventListeners() {
+function setEventListeners_typographies() {
     
     // This might not be necessary because we call setTypographies when reloading
     // window.onload = () => {
@@ -88,4 +88,4 @@ function setElementTypography(elementObject, element, version) {
 }
 
 
-main();
+typographiesMain();

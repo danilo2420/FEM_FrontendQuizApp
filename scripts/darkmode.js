@@ -1,11 +1,10 @@
-console.log("Hello from darkmode.js");
 
 // TODO: Have a script that references a JSON to simplify this code
 
 // Is dark mode activated?
 let darkMode = false; 
 
-function main() {
+function darkmodeMain() {
     const toggleButton = document.querySelector('.topSection__rightSection__toggleButton');
 
     toggleButton.addEventListener('click', (event) => {
@@ -63,4 +62,4 @@ function main() {
     });
 }
 
-main();
+darkmodeMain();
