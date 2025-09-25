@@ -45,7 +45,7 @@ const pageManager = {
             }).then((data) => {
                 pageManager.quizzesData = data;
                 pageManager.quizzesDataInitialized = true;
-                pageManager.populateQuestionPage(0, 1);
+                pageManager.populateQuestionPage(0, 1); // This should be removed once the function is built
             }).catch((error) => {
                 console.log(error);
             });
@@ -112,7 +112,8 @@ const pageManager = {
         const questionText = questionSet[questionIndex].question;
         const questionOptions = questionSet[questionIndex].options;
         const questionAnswer = questionSet[questionIndex].answer;
-        
+
+        // TODO: Now you just have to get the elements from page 2 and set the text where it needs to go
     }
 }
 
