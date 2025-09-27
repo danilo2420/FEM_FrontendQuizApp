@@ -48,6 +48,7 @@ const pageManager = {
                 pageManager.quizzesData = data;
                 pageManager.quizzesDataInitialized = true;
                 pageManager.populateQuestionPage(1, 0); // This should be removed once the function is built
+                pageManager.setProgressbar(0, 5);
             }).catch((error) => {
                 console.log(error);
             });
@@ -135,10 +136,33 @@ const pageManager = {
         // Set value for answer variable
         pageManager.currAnswer = questionAnswer;
 
+        // Set question subtitle
+        const subtitleElement = document.querySelector('.bottomSection__leftSection__question__top__questionNumber');
+        subtitleElement.textContent = `Question ${questionIndex + 1} of ${questionSet.length}`;
+
+        // Set progress bar
+
+
+    },
+
+    setProgressbar(questionIndex, questionTotal) {
+        // Validation
+        if (questionIndex < 0 || questionIndex > questionTotal) {
+            console.log("Question index in setPogressbar function is not valid");
+            questionIndex = 0;
+        }
+        if (questionTotal <= 0) {
+            console.log("questionTotal is setProgressbar function is not valid");
+            questionTotal = 1;
+        }
+
+        // Calculate progress and represent it visually
+        const progressbarBar = document.querySelector('.bottomSection__leftSection__question__bottom > div');
+        progressbarBar.style.width = `${(questionIndex / questionTotal) * 100}%`;
+
     }
 }
 
 // FUNCTION CALLS
 pageManager.loadQuizzesData();
 pageManager.setPage(1);
-pageManager.populateQuestionPage(2, 4);
