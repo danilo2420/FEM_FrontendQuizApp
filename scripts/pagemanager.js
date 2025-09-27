@@ -114,10 +114,11 @@ const pageManager = {
         const questionAnswer = questionSet[questionIndex].answer;
 
         // TODO: Now you just have to get the elements from page 2 and set the text where it needs to go
+        console.log(questionText, questionOptions, questionAnswer);
     }
 }
 
 // FUNCTION CALLS
 pageManager.loadQuizzesData();
-pageManager.setPage(0);
+pageManager.setPage(1);
 pageManager.populateQuestionPage(0, 1);
