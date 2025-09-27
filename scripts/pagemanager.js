@@ -47,8 +47,7 @@ const pageManager = {
             }).then((data) => {
                 pageManager.quizzesData = data;
                 pageManager.quizzesDataInitialized = true;
-                pageManager.populateQuestionPage(1, 0); // This should be removed once the function is built
-                pageManager.setProgressbar(0, 5);
+                pageManager.populateQuestionPage(0, 1); // This should be removed once the function is built
             }).catch((error) => {
                 console.log(error);
             });
@@ -141,7 +140,7 @@ const pageManager = {
         subtitleElement.textContent = `Question ${questionIndex + 1} of ${questionSet.length}`;
 
         // Set progress bar
-
+        pageManager.setProgressbar(questionIndex, questionSet.length);
 
     },
 
