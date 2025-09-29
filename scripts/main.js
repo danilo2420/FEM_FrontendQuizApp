@@ -126,7 +126,12 @@ function setStartmenuEventListeners() {
                 pageManager.setPage(2);
             }
         }
-        
+    }
+
+    // Play again
+    const playAgainButton = document.querySelector('.bottomSection__rightSection__score__btn');
+    playAgainButton.onclick = function() {
+        pageManager.setPage(0);
     }
 }
 
