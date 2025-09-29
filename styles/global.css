@@ -310,3 +310,12 @@ body {
 .answer--wrong > .wrong-icon {
     display: block;
 }
+
+.answer--selected {
+    border: solid var(--purple600) 3px;
+}
+
+.answer--selected > .bottomSection__rightSection__question__item__letter {
+    color: var(--white);
+    background-color: var(--purple600);
+}

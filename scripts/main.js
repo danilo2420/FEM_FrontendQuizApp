@@ -28,6 +28,7 @@ function setEventListeners() {
 }
 
 function setStartmenuEventListeners() {
+    // Go from start menu to topic questions
     const startMenuItems = document.querySelectorAll('.bottomSection__rightSection__startMenu__item');
     for (const menuItem of startMenuItems) {
         menuItem.addEventListener('click', () => {
@@ -38,8 +39,19 @@ function setStartmenuEventListeners() {
             pageManager.setTopIcon(currentTopic);
             pageManager.setPage(1);
             pageManager.populateQuestionPage(currentTopic, currentQuestion);
-        })
+        });
     }
+
+    // Select answer
+    const questionAnswerElements = document.querySelectorAll('.bottomSection__rightSection__question__item');
+    const submitButton = document.querySelector('.bottomSection__rightSection__question__btn');
+    for (const selectedItem of questionAnswerElements) 
+        selectedItem.onclick = function() {
+            for (const item of questionAnswerElements) 
+                item.classList.remove('answer--selected');
+            selectedItem.classList.add('answer--selected');
+            submitButton.classList.remove('btn--notactive');
+        }
 }
 
 main();
