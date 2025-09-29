@@ -229,6 +229,28 @@ body {
         padding: 8px;
     }
 
+    /* Modifiers for the top left icon */
+    .topSection__leftSection__icon--html {
+        content: url('../assets/images/icon-html.svg');
+        background-color: var(--orange50);
+    }
+
+    .topSection__leftSection__icon--css {
+        content: url('../assets/images/icon-css.svg');
+        background-color: var(--green100);
+    }
+
+    .topSection__leftSection__icon--javascript {
+        content: url('../assets/images/icon-js.svg');
+        background-color: var(--blue50);
+    }
+
+    .topSection__leftSection__icon--accessibility {
+        content: url('../assets/images/icon-accessibility.svg');
+        background-color: var(--purple100);
+    }
+    /**/
+
     .topSection__rightSection {
         gap: 16px;
     }

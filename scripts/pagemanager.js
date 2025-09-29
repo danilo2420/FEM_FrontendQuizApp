@@ -47,7 +47,6 @@ const pageManager = {
             }).then((data) => {
                 pageManager.quizzesData = data;
                 pageManager.quizzesDataInitialized = true;
-                pageManager.populateQuestionPage(0, 1); // This should be removed once the function is built
             }).catch((error) => {
                 console.log(error);
             });
@@ -140,11 +139,11 @@ const pageManager = {
         subtitleElement.textContent = `Question ${questionIndex + 1} of ${questionSet.length}`;
 
         // Set progress bar
-        pageManager.setProgressbar(questionIndex, questionSet.length);
+        pageManager.__setProgressbar(questionIndex, questionSet.length);
 
     },
 
-    setProgressbar(questionIndex, questionTotal) {
+    __setProgressbar(questionIndex, questionTotal) {
         // Validation
         if (questionIndex < 0 || questionIndex > questionTotal) {
             console.log("Question index in setPogressbar function is not valid");
@@ -158,10 +157,50 @@ const pageManager = {
         // Calculate progress and represent it visually
         const progressbarBar = document.querySelector('.bottomSection__leftSection__question__bottom > div');
         progressbarBar.style.width = `${(questionIndex / questionTotal) * 100}%`;
+    },
+    setTopIcon(topicIndex) {
+        // Input validation
+        if (topicIndex < 0 || topicIndex > 4) {
+            console.error("topicIndex parameter in setTopIcon is not valid");
+            topicIndex = 0;
+        }
 
+        // Set the right title
+        const topIconTitle = document.querySelector('.topSection__leftSection__title');
+        topIconTitle.innerHTML = pageManager.topicMap[topicIndex];
+
+        // Get the icon element to change its style
+        const topIconImg = document.querySelector('.topSection__leftSection__icon');
+
+        // Remove previous style
+        for (const cssClass of topIconImg.classList) {
+            if (cssClass.startsWith('topSection__leftSection__icon--')) {
+                topIconImg.classList.remove(cssClass);
+            }
+        }
+
+        // Add new style
+        switch (topicIndex) {
+            case 0:
+                topIconImg.classList.add('topSection__leftSection__icon--html');
+                break;
+            case 1:
+                topIconImg.classList.add('topSection__leftSection__icon--css');
+                break;
+            case 2:
+                topIconImg.classList.add('topSection__leftSection__icon--javascript');
+                break;
+            case 3:
+                topIconImg.classList.add('topSection__leftSection__icon--accessibility');
+                break;
+            default:
+                console.log("Error in switch case in setTopIcon");
+        }
     }
 }
 
 // FUNCTION CALLS
 pageManager.loadQuizzesData();
 pageManager.setPage(1);
+
+pageManager.setTopIcon(1);
