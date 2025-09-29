@@ -1,35 +1,24 @@
 
-let dataObject;
-let questionsTotal;
-let questionsRight;
-let questionsCurrent;
-let topicCurrent;
+let currentTopic = -1;
+let currentQuestion = -1;
+let questionsTotal = -1;
+let questionsRight = -1;
 
 function main() {
-    return; // Not doing anything here at the moment
-    // Load data
-    fetch('data/data.json')
-        .then((response) => {
-            if (!response.ok)
-                throw new Error("Error loading data.json file");
-            return response.json();
-        }).then((data) => {
-            dataObject = data;
-
-            initializeGame(); // TODO: perhaps have an object to control the page displayed?
-
-            setEventListeners();
-
-        }).catch((error) => {
-            console.log(error);
-        });
+    setEventListeners();
 }
 
-function initializeGame() {
-    questionsTotal = 0;
+function initializeGame(topicIndex) {
+    if (!pageManager.quizzesDataInitialized) {
+        alert("Data could not be loaded. Try again.");
+        return;
+    }
+
+    // Initialize variables
+    currentTopic = topicIndex;
+    currentQuestion = 0;
+    questionsTotal = pageManager.quizzesData.quizzes[topicIndex].questions.length;
     questionsRight = 0;
-    questionsCurrent = 0;
-    topicCurrent = "";
 }
 
 function setEventListeners() {
@@ -43,9 +32,12 @@ function setStartmenuEventListeners() {
     for (const menuItem of startMenuItems) {
         menuItem.addEventListener('click', () => {
             const topic = menuItem.dataset.topic;
-            console.log(topic + " was chosen");
+            initializeGame(topic);
 
             // Make next stage appear
+            pageManager.setTopIcon(currentTopic);
+            pageManager.setPage(1);
+            pageManager.populateQuestionPage(currentTopic, currentQuestion);
         })
     }
 }

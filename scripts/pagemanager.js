@@ -47,8 +47,9 @@ const pageManager = {
             }).then((data) => {
                 pageManager.quizzesData = data;
                 pageManager.quizzesDataInitialized = true;
+                console.log(data);
             }).catch((error) => {
-                console.log(error);
+                console.error(error);
             });
     },
 
@@ -179,18 +180,20 @@ const pageManager = {
             }
         }
 
+        console.log(topicIndex);
+
         // Add new style
         switch (topicIndex) {
-            case 0:
+            case "0":
                 topIconImg.classList.add('topSection__leftSection__icon--html');
                 break;
-            case 1:
+            case "1":
                 topIconImg.classList.add('topSection__leftSection__icon--css');
                 break;
-            case 2:
+            case "2":
                 topIconImg.classList.add('topSection__leftSection__icon--javascript');
                 break;
-            case 3:
+            case "3":
                 topIconImg.classList.add('topSection__leftSection__icon--accessibility');
                 break;
             default:
@@ -201,6 +204,6 @@ const pageManager = {
 
 // FUNCTION CALLS
 pageManager.loadQuizzesData();
-pageManager.setPage(1);
+pageManager.setPage(0);
 
-pageManager.setTopIcon(1);
+pageManager.setTopIcon(0);
