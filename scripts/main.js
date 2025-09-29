@@ -122,6 +122,8 @@ function setStartmenuEventListeners() {
                 pageManager.populateQuestionPage(currentTopic, currentQuestion);
             } else {
                 // Go to score page
+                pageManager.setScorePageData(currentTopic, questionsRight, questionsTotal);
+                pageManager.setPage(2);
             }
         }
         

@@ -193,6 +193,27 @@ body {
     background-color: var(--purple100);
     border-radius: 4px;
 }
+/* Icon modifiers for last page */
+.bottomSection__rightSection__score__result__top__icon--html {
+    content: url('../assets/images/icon-html.svg');
+    background-color: var(--orange50);
+}
+
+.bottomSection__rightSection__score__result__top__icon--css {
+    content: url('../assets/images/icon-css.svg');
+    background-color: var(--green100);
+}
+
+.bottomSection__rightSection__score__result__top__icon--javascript {
+    content: url('../assets/images/icon-js.svg');
+    background-color: var(--blue50);
+}
+
+.bottomSection__rightSection__score__result__top__icon--accessibility {
+    content: url('../assets/images/icon-accessibility.svg');
+    background-color: var(--purple100);
+}
+/* */
 
 .bottomSection__rightSection__score__result__bottom {
     display: flex;

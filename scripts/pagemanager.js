@@ -222,6 +222,42 @@ const pageManager = {
                     .quizzes[topicIndex]
                     .questions[questionIndex]
                     .answer;
+    },
+    setScorePageData(topicIndex, questionsRight, questionsTotal) {
+        // Set topic title
+        const topicTitle = document.querySelector('.bottomSection__rightSection__score__result__top__topic');
+        topicTitle.textContent = pageManager.topicMap[topicIndex];
+
+        // Set topic style
+        const scoreTopicIcon = document.querySelector('.bottomSection__rightSection__score__result__top__icon');
+        for (const cssClass of scoreTopicIcon.classList) 
+            if (cssClass.startsWith('bottomSection__rightSection__score__result__top__icon--')) 
+                scoreTopicIcon.classList.remove(cssClass);
+        
+        switch (topicIndex) {
+            case "0":
+                scoreTopicIcon.classList.add('bottomSection__rightSection__score__result__top__icon--html');
+                break;
+            case "1":
+                scoreTopicIcon.classList.add('bottomSection__rightSection__score__result__top__icon--css');
+                break;
+            case "2":
+                scoreTopicIcon.classList.add('bottomSection__rightSection__score__result__top__icon--javascript');
+                break;
+            case "3":
+                scoreTopicIcon.classList.add('bottomSection__rightSection__score__result__top__icon--accesibility');
+                break;
+            default:
+                console.error("Error in switch statement in setScorePageData");
+        }
+
+        // Set number of right answers
+        const rightAnswersNumber = document.querySelector('.bottomSection__rightSection__score__result__bottom__bigNumber');
+        rightAnswersNumber.textContent = "" + questionsRight;
+
+        // Set total number of questions
+        const totalQuestions = document.querySelector('.bottomSection__rightSection__score__result__bottom__subtext');
+        totalQuestions.textContent = "out of " + questionsTotal;
     }
 }
 
