@@ -107,8 +107,6 @@ const pageManager = {
             questionIndex = 0;
         }
 
-        console.log(topicIndex, questionIndex);
-
         // Get topic and questions data
         const topic = pageManager.quizzesData.quizzes[topicIndex].title;
         const questionSet = pageManager.quizzesData.quizzes[topicIndex].questions;
@@ -199,11 +197,34 @@ const pageManager = {
             default:
                 console.log("Error in switch case in setTopIcon");
         }
+    },
+    getQuestionAnswer(topicIndex, questionIndex) {
+        // Validate input
+        if (topicIndex < 0 || !Object.values(pageManager.topicMap).length) {
+            console.log("Topic index not valid");
+            topicIndex = 0;
+        }
+
+        const questionNumber = pageManager
+                        .quizzesData
+                        .quizzes[topicIndex]
+                        .questions
+                        .length;
+
+        if (questionIndex < 0 || questionIndex >= questionNumber) {
+            console.log("Question number not valid");
+            questionIndex = 0;
+        }
+
+        // Return answer text
+        return pageManager
+                    .quizzesData
+                    .quizzes[topicIndex]
+                    .questions[questionIndex]
+                    .answer;
     }
 }
 
 // FUNCTION CALLS
 pageManager.loadQuizzesData();
 pageManager.setPage(0);
-
-pageManager.setTopIcon(0);
