@@ -370,7 +370,8 @@ body {
     }
 
     .bottomSection__leftSection__question {
-        gap: 184px;
+        height: 80%;
+        justify-content: space-between;
     }
 
     .bottomSection__rightSection__question__item__letter {
