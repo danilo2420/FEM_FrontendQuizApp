@@ -1,7 +1,5 @@
 @import url('global.css');
 
-/* TODO: make variables for media queries cut points */
-
 body {
     background-image: url('../assets/images/pattern-background-mobile-light.svg');
     background-repeat: no-repeat;

@@ -8,7 +8,15 @@ let currentSelectedAnswer = "";
 let roundFinished = false;
 
 function main() {
+    checkDarkmode();
     setEventListeners();
+}
+
+function checkDarkmode() {
+    if (!window.matchMedia) return;
+    
+    const query = window.matchMedia('(prefers-color-scheme:dark)');
+    if (query.matches) toggleDarkMode();
 }
 
 function initializeGame(topicIndex) {
