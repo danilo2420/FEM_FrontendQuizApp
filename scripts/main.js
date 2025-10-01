@@ -27,8 +27,6 @@ function initializeGame(topicIndex) {
 }
 
 function setEventListeners() {
-    console.log("Setting event listeners");
-
     setStartmenuEventListeners();
 }
 
@@ -64,7 +62,6 @@ function setStartmenuEventListeners() {
     submitButton.onclick = function() {
         if (!roundFinished) {
             if (submitButton.classList.contains('btn--notactive')) return;
-            console.log("Submitting");
 
             // Get selected answer 
             let answerSelectedElement = null;
@@ -75,7 +72,6 @@ function setStartmenuEventListeners() {
                     break;
                 }
             }
-            console.log("Answer selected is " + currentSelectedAnswer);
 
             // Get real answer from data
             const realAnswer = pageManager.getQuestionAnswer(currentTopic, currentQuestion);

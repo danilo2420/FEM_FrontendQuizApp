@@ -27,7 +27,7 @@ function typographiesMain() {
             setTypographies();
             setEventListeners_typographies();
         }).catch((error) => {
-            console.log(error);
+            console.error(error);
         });
 }
 

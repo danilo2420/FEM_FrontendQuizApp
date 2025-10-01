@@ -54,11 +54,6 @@ function darkmodeMain() {
 
         // Keep state in a variable in case we need it
         darkMode = !darkMode;
-        console.log(
-            darkMode ? 
-                "Website is now in dark mode" :
-                "Website is now in light mode"
-        )
     });
 }
 

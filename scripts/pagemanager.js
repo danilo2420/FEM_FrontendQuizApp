@@ -47,7 +47,6 @@ const pageManager = {
             }).then((data) => {
                 pageManager.quizzesData = data;
                 pageManager.quizzesDataInitialized = true;
-                console.log(data);
             }).catch((error) => {
                 console.error(error);
             });
@@ -56,7 +55,6 @@ const pageManager = {
     setPage: (index) => {
         // Validate page index
         if (index < 0 || index >= Object.keys(pageManager.pages).length) {
-            console.log("Invalid index in pageManager.setPage");
             index = 0;
         }
 
@@ -92,7 +90,7 @@ const pageManager = {
 
         // Validate input
         if (topicIndex < 0 || !Object.values(pageManager.topicMap).length) {
-            console.log("Topic index not valid");
+            console.error("Topic index not valid");
             topicIndex = 0;
         }
 
@@ -103,7 +101,7 @@ const pageManager = {
                         .length;
 
         if (questionIndex < 0 || questionIndex >= questionNumber) {
-            console.log("Question number not valid");
+            console.error("Question number not valid");
             questionIndex = 0;
         }
 
@@ -145,11 +143,11 @@ const pageManager = {
     __setProgressbar(questionIndex, questionTotal) {
         // Validation
         if (questionIndex < 0 || questionIndex > questionTotal) {
-            console.log("Question index in setPogressbar function is not valid");
+            console.error("Question index in setPogressbar function is not valid");
             questionIndex = 0;
         }
         if (questionTotal <= 0) {
-            console.log("questionTotal is setProgressbar function is not valid");
+            console.error("questionTotal is setProgressbar function is not valid");
             questionTotal = 1;
         }
 
@@ -178,8 +176,6 @@ const pageManager = {
             }
         }
 
-        console.log(topicIndex);
-
         // Add new style
         switch (topicIndex) {
             case "0":
@@ -195,13 +191,13 @@ const pageManager = {
                 topIconImg.classList.add('topSection__leftSection__icon--accessibility');
                 break;
             default:
-                console.log("Error in switch case in setTopIcon");
+                console.error("Error in switch case in setTopIcon");
         }
     },
     getQuestionAnswer(topicIndex, questionIndex) {
         // Validate input
         if (topicIndex < 0 || !Object.values(pageManager.topicMap).length) {
-            console.log("Topic index not valid");
+            console.error("Topic index not valid");
             topicIndex = 0;
         }
 
@@ -212,7 +208,7 @@ const pageManager = {
                         .length;
 
         if (questionIndex < 0 || questionIndex >= questionNumber) {
-            console.log("Question number not valid");
+            console.error("Question number not valid");
             questionIndex = 0;
         }
 
