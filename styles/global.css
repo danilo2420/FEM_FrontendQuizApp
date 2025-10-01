@@ -197,6 +197,14 @@ body {
     display: flex;
     align-items: center;
     gap: 16px;
+
+    cursor: pointer;
+
+    transition: transform 0.1s;
+}
+
+.customList > *:hover {
+    transform: scale(1.02);
 }
 
 .customList > * > img {
@@ -252,6 +260,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
+
+    transition: transform 0.1s;
+}
+
+.btn:hover {
+    transform: scale(1.02);
 }
 
 @media (min-width: 600px) {
@@ -274,6 +290,8 @@ body {
 /* Modifiers */
 .btn--notactive {
     opacity: 0.5;
+
+    cursor: default;
 }
 
 .answer--chosen {

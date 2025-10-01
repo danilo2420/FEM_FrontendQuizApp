@@ -60,6 +60,10 @@ body {
     border-radius: 100%;
 }
 
+.topSection__rightSection__toggleButton:hover {
+    transform: scale(1.05);
+}
+
 /* BOTTOM SECTION */
 .bottomSection {
     padding: 32px 24px;
